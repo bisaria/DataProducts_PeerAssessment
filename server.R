@@ -27,7 +27,7 @@ shinyServer(function(input, output) {
   })
   
   output$text3 <- renderText({ 
-    paste("You have entered", input$tchl,". Less than 200 mg/dL is considered 'Desirable' level.  Higher the total cholestrol level higher is the risk of hear attack.")
+    paste("You have entered", input$tchl,". Less than 200 mg/dL is considered 'Desirable' level.  Higher the total cholestrol level higher is the risk of heart attack.")
   })
   
   output$text4 <- renderText({ 
@@ -61,8 +61,15 @@ shinyServer(function(input, output) {
   
   
   output$text7 <- renderText({   
-    if( test() > 25)
+    if( test() > 50)
       paste("You better be careful, buddy!")
+    else
+      NULL
+    
+  }) 
+  output$text8 <- renderText({   
+    if( test() > 50)
+      NULL
     else
       paste("You have nothing to worry for now!")
     

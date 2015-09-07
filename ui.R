@@ -47,7 +47,16 @@ shinyUI(fluidPage(
       helpText("BP Medication"),
       textOutput("text6"),
       helpText(h3("Your Prediction:")),
-      textOutput("text7")
+      textOutput("text7"),
+      textOutput("text8"),
+      tags$head(tags$style(
+                           "#text7{color: red;
+                                 font-size: 20px;
+                                 font-style: italic;
+                                 }",
+                           "#text8{color: blue;}"
+                          )
+                )
       )
   )
   
